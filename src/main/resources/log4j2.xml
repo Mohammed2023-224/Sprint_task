@@ -1,0 +1,29 @@
+<configuration status="info">
+	<Properties>
+		<Property name="layout_console">%highlight{%d{YYYY MM DD HH MM ss} [%t] %-5level: %msg%n}</Property>
+		<Property name="file_pattern">%d{YYYY MM DD HH MM}</Property>
+		<Property name="layout_file">%d{YYYY MM DD HH MM ss} [%t] %-5level: %msg%n</Property>
+		<Property name="path">./test-output/logs</Property>
+	</Properties>
+	<Appenders>
+		<console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${layout_console}"></PatternLayout>
+		</console>
+		<RollingFile name="mifile" fileName="${path}/mylog.log"
+			filePattern="${path}/mylog_${file_pattern}.log">
+			<PatternLayout pattern="${layout_file}"></PatternLayout>
+			<SizeBasedTriggeringPolicy size="2 MB"></SizeBasedTriggeringPolicy>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Root level="info"><!-- -->
+			<AppenderRef ref="console" level="off"></AppenderRef>
+			<AppenderRef ref="mifile" level="off"></AppenderRef>
+		</Root>
+		<Logger name="milog" level="info">
+			<AppenderRef ref="console" level="info"></AppenderRef>
+			<AppenderRef ref="mifile" level="info"></AppenderRef>
+		</Logger>
+
+	</Loggers>
+</configuration>
