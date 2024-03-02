@@ -1,6 +1,6 @@
 # Objetives:
 
-In this project, I automated some of the complex and hard test cases for an E-commerce website  [https://egyptlaptop.com/](url)
+In this project, I automated some of the complex and hard test cases for an E-commerce website  [https://egyptlaptop.com/](url) where I used the POM design pattern to create a good automation framework.
 
 ## Tools & frameworks used 
 
