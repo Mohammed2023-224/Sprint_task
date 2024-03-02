@@ -1,6 +1,6 @@
 # Objetives:
 
-In this project I automated some of the complex and hard test caes for an E-commerce website  [https://egyptlaptop.com/](url)
+In this project, I automated some of the complex and hard test cases for an E-commerce website  [https://egyptlaptop.com/](url)
 
 ## Tools & frameworks used 
 
@@ -15,6 +15,6 @@ In this project I automated some of the complex and hard test caes for an E-comm
 ## Improvments
 
 - More test cases
-- Flakiness of some tests (in the parallel mode)
+- Flakiness of some tests (in the parallel mode) due to the speed of execution and no items in the database
 - Headless mode needs more improvements for wait time and screen resolutions
 - More appropriate usage of locators.
